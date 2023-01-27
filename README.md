@@ -29,7 +29,9 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## Understanding Entry point
 
 Specifically there is no entry point in an angular application.
+
                         main.ts  >>   app.Module.ts  >>  app.component.ts  >>  index.html  >>  app.component.html
+                        
 However, while the application first loads/runs it starts from main.ts[Where it bootstraps the first declaration mentioned in the ngModule of app.module.ts] >> app.Module.ts[From here,it finds the class and its appropriate selector from the following file]  >>  app.component.ts[from here,it finds the selector and associated templateurl's and css and goes to the following file]  >>  index.html[the selector name from the app.component.ts file is found here and associated content is loaded as a html page]  >>  app.component.html [Here,you can specify as many components as needed and also style the html in the css file mentioned in the @component decorator] 
 
 What parts of the application will be compiled is being determined by your main.ts file, and mostly the line

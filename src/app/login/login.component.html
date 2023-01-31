@@ -1,1 +1,8 @@
-<p>login works!</p>
+<p>
+<!-- In this login page 3 concepts are used. Interpolation,2 way data binding,and Event binding.Please refer to info.file for details-->
+
+Username : <input type="text" name="Username" [(ngModel)] = "username"> <p></p>
+Login : <input type="password" name="password" [(ngModel)] = "password"> <p>
+
+<button (click)=handleLogin()>Login</button>
+

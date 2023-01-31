@@ -1,0 +1,24 @@
+Learnings
+
+1.Interpolation - What it basically does is it ties up the view(username entered on the login page) to the value of the component property(username from the login.component.ts)
+
+2.Two way data binding using ngModule -  Below is a traditional way of getting and binding username value from the user input/view to the variable specified in login.component.ts 
+If we change the data in the input,i.e if we type a new value in the current input,the output won't be displayed.Reason is,the data(username)
+is one way binded.So in order to do a 2 way binding,we need to use 'ngModel' feature instead of value in a structure called 'banana in a box' [()] structure
+in order to use the ngModel feature, you need to import the class 'FormsModule' into app.module.ts file under imports declaration
+
+3.Event binding - Binding of an event of a view, a click of the view/user action/click of a button to the event method on the component
+
+4. Understanding Entry point
+
+Specifically there is no entry point in an angular application.
+
+   main.ts  >>   app.Module.ts  >>  app.component.ts  >>  index.html  >>  app.component.html
+                        
+However, while the application first loads/runs it starts from main.ts[Where it bootstraps the first declaration mentioned in the ngModule of app.module.ts] >> app.Module.ts[From here,it finds the class and its appropriate selector from the following file]  >>  app.component.ts[from here,it finds the selector and associated templateurl's and css and goes to the following file]  >>  index.html[the selector name from the app.component.ts file is found here and associated content is loaded as a html page]  >>  app.component.html [Here,you can specify as many components as needed and also style the html in the css file mentioned in the @component decorator] 
+
+What parts of the application will be compiled is being determined by your main.ts file, and mostly the line
+
+platformBrowserDynamic().bootstrapModule(AppModule)
+
+which defines the AppModule to be the "entry point" of your application.

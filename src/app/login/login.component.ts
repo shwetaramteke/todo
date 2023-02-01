@@ -11,8 +11,19 @@ export class LoginComponent {
 
   username = 'shweta' //This is a default username,i.e if we want to show a default username we can define it here,otherwise leave empty
   password = ''
+  errorMessage = 'Invalid Credentials !!'
+  invalidLogin = false
 
   handleLogin(){
-    console.log(this.username)
+
+      if (this.username === 'shweta' && this.password === 'ashish') {
+          this.invalidLogin = false
+          console.log('is invalid? - '+this.invalidLogin)
+      } else {
+          this.invalidLogin = true
+          console.log('is invalid? - '+this.invalidLogin)
+      }
+
+    //console.log(this.username)
   }
 }

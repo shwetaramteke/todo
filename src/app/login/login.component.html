@@ -1,8 +1,10 @@
-<p>
-<!-- In this login page 3 concepts are used. Interpolation,2 way data binding,and Event binding.Please refer to info.file for details-->
+<small *ngIf="invalidLogin">{{errorMessage}}</small>
 
-Username : <input type="text" name="Username" [(ngModel)] = "username"> <p></p>
-Login : <input type="password" name="password" [(ngModel)] = "password"> <p>
+<div>
+    <!-- In this login page 3 concepts are used. Interpolation,2 way data binding,and Event binding.Please refer to info.file for details-->
 
-<button (click)=handleLogin()>Login</button>
+    Username : <input type="text" name="Username" [(ngModel)]="username">
+    Login : <input type="password" name="password" [(ngModel)]="password">
 
+    <button (click)=handleLogin()>Login</button>
+</div>

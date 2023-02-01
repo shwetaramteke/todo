@@ -7,6 +7,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { MyfirstPracticeComponentComponent } from './myfirst-practice-component/myfirst-practice-component.component';
 import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
+import { ErrorComponent } from './error/error.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { FormsModule } from '@angular/forms';
     AppComponent,
     WelcomeComponent,
     MyfirstPracticeComponentComponent,
-    LoginComponent
+    LoginComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,

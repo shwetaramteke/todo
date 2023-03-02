@@ -54,3 +54,8 @@ Learnings
         Everything else **
         Which means anything other than the paths specified in the url is set to be the view specifies with the component
 
+7.Constructor in Typescript
+        A dependency is supposed to be passed as an agrument of the Constructor
+
+        Anything declared in the constructor works as a class member variable
+        and can be used anywhere in the class

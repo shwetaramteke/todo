@@ -1,6 +1,7 @@
 //This class is the bussiness logic of the view login.component.html.All the related logic will be written here
 
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -14,15 +15,19 @@ export class LoginComponent {
   errorMessage = 'Invalid Credentials !!'
   invalidLogin = false
 
-  handleLogin(){
+  constructor(private router: Router) { }
 
-      if (this.username === 'shweta' && this.password === 'ashish') {
-          this.invalidLogin = false
-          console.log('is invalid? - '+this.invalidLogin)
-      } else {
-          this.invalidLogin = true
-          console.log('is invalid? - '+this.invalidLogin)
-      }
+
+  handleLogin() {
+
+    if (this.username === 'shweta' && this.password === 'ashish') {
+      this.router.navigate(['welcome'])
+      this.invalidLogin = false
+      console.log('is invalid? - ' + this.invalidLogin)
+    } else {
+      this.invalidLogin = true
+      console.log('is invalid? - ' + this.invalidLogin)
+    }
 
     //console.log(this.username)
   }

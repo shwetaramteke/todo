@@ -5,9 +5,9 @@ Learnings
         What it basically does is it ties up the view(username entered on the login page) to the value of the component property(username from the login.component.ts)
 
 2.Two way data binding using ngModule -  
-        Below is a traditional way of getting and binding username value from the user input/view to the variable specified in login.component.ts 
+        (value = "username") is a traditional way of getting and binding username value from the user input/view to the variable specified in login.component.ts 
         If we change the data in the input,i.e if we type a new value in the current input,the output won't be displayed.Reason is,the data(username)
-        is one way binded.So in order to do a 2 way binding,we need to use 'ngModel' (called as angular directive) feature instead of value in a structure called 'banana in a box' [()] structure
+        is one way binded.So in order to do a 2 way binding,we need to use 'ngModel' (called as angular directive) feature instead of value in a structure called 'banana in a box' [()] 
         in order to use the ngModel feature, you need to import the class 'FormsModule' into app.module.ts file under imports declaration
 
 3.Event binding - 
@@ -49,7 +49,7 @@ Learnings
 
 
 *Path - Empty path ''
-        if no further url or path is appended to the ur,then it shows the default page as the one component specified
+        if no further url or path is appended to the url,then it shows the default page as the one component specified
 
         Everything else **
         Which means anything other than the paths specified in the url is set to be the view specifies with the component
